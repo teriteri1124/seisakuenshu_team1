@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 836184490}
   - component: {fileID: 836184489}
   m_Layer: 0
-  m_Name: test
+  m_Name: tesuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
