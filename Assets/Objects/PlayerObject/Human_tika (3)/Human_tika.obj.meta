@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de321c71fc33d9d41965004e78acac39
+guid: aaa418b62e36a84478bed0a51e3d010a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -39,9 +39,9 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
     importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
@@ -65,7 +65,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
@@ -83,11 +83,16 @@ ModelImporter:
     skeleton:
     - name: Human_tika(Clone)
       parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Human_tika_root
+      parentName: Human_tika(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: default
-      parentName: Human_tika(Clone)
+      parentName: Human_tika_root
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -101,7 +106,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
