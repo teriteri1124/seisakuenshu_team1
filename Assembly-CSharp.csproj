@@ -72,8 +72,10 @@
     <Compile Include="Assets\Script\toCave_sc.cs" />
     <Compile Include="Assets\Script\Camera_set.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Script\lever.cs" />
     <Compile Include="Assets\Script\SE_manage.cs" />
     <Compile Include="Assets\Script\PlayerCtr.cs" />
+    <Compile Include="Assets\Script\lift.cs" />
     <Compile Include="Assets\Script\BlackRenderCamera.cs" />
   </ItemGroup>
   <ItemGroup>
