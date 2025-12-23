@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class lift : MonoBehaviour
+public class lift_shatle : MonoBehaviour
 {
     [Header("Reference")]
     public lever lever;
@@ -27,10 +27,10 @@ public class lift : MonoBehaviour
         if (lever == null) return;
 
         // レバーを操作するまで動かさない
-        if (moveOnlyWhenLeverOn && !lever.hasSwitched)
-        {
-            return;
-        }
+        //if (moveOnlyWhenLeverOn && !lever.hasSwitched)
+        //{
+        //   return;
+        //}
 
         float currentY = transform.position.y;
 
