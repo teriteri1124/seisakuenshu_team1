@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game scene.unity
     guid: f3cb3eb4345da0c47b9bea17cc145e41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/cave scene.unity
     guid: 70fa98068d5cd924f86ccc2fa8d4d6a4
+  - enabled: 1
+    path: Assets/Scenes/Hinata_scene.unity
+    guid: 732581a94ac7c804099daec4285efc97
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
