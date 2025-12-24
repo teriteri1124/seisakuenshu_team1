@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\Replacement_shader.cs" />
     <Compile Include="Assets\Script\camera_follow.cs" />
     <Compile Include="Assets\Script\PlayerCtrl (1).cs" />
+    <Compile Include="Assets\GimmickCtr.cs" />
     <Compile Include="Assets\Replacement_shader.cs" />
     <Compile Include="Assets\Script\toCave_sc.cs" />
     <Compile Include="Assets\Script\Camera_set.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Script\SE_manage.cs" />
     <Compile Include="Assets\Script\PlayerCtr.cs" />
     <Compile Include="Assets\Script\lift_shatle.cs" />
+    <Compile Include="Assets\Script\combare.cs" />
     <Compile Include="Assets\Script\BlackRenderCamera.cs" />
   </ItemGroup>
   <ItemGroup>

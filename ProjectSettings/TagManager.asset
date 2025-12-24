@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - mine zone
   layers:
   - Default
   - TransparentFX
