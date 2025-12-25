@@ -65,14 +65,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.37f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\tsuru_climb.cs" />
     <Compile Include="Assets\Script\Replacement_shader.cs" />
+    <Compile Include="Assets\liftSpawnerWithoutLever.cs" />
     <Compile Include="Assets\Script\camera_follow.cs" />
     <Compile Include="Assets\Script\PlayerCtrl (1).cs" />
-    <Compile Include="Assets\GimmickCtr.cs" />
     <Compile Include="Assets\Replacement_shader.cs" />
     <Compile Include="Assets\Script\toCave_sc.cs" />
+    <Compile Include="Assets\Script\GimmickCtr.cs" />
     <Compile Include="Assets\Script\Camera_set.cs" />
     <Compile Include="Assets\Script\lift_roop.cs" />
+    <Compile Include="Assets\Script\object_scale.cs" />
     <Compile Include="Assets\Script\lift_spawner.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Script\lever.cs" />
