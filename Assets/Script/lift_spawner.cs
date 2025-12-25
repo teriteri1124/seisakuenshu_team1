@@ -7,15 +7,19 @@ public class lift_spawner : MonoBehaviour
     public lift_roop liftPrefab;
     public lever lever;
 
+    [Header("Lever Option")]
+    public bool useLever = true; // ★ レバーを使うか
+    public bool fixedUp = true;  // ★ レバー無効時の向き
+
     [Header("Move Settings")]
     public float speed = 2f;
 
     [Header("Y Settings")]
-    public float spawnY_Up = 0f;        // 上昇時の生成Y
-    public float destroyY_Up = 10f;     // 上昇時の破壊Y
+    public float spawnY_Up = 0f;
+    public float destroyY_Up = 10f;
 
-    public float spawnY_Down = 10f;     // 下降時の生成Y
-    public float destroyY_Down = 0f;    // 下降時の破壊Y
+    public float spawnY_Down = 10f;
+    public float destroyY_Down = 0f;
 
     [Header("Spawn Settings")]
     public float spawnInterval = 3f;
@@ -24,12 +28,16 @@ public class lift_spawner : MonoBehaviour
 
     void Start()
     {
-        lastLeverState = lever.isUp;
+        if (useLever && lever != null)
+            lastLeverState = lever.isUp;
+
         StartCoroutine(SpawnLoop());
     }
 
     void Update()
     {
+        if (!useLever || lever == null) return;
+
         // レバー切り替え検知
         if (lever.isUp != lastLeverState)
         {
@@ -49,12 +57,20 @@ public class lift_spawner : MonoBehaviour
 
     void OnLeverSwitched()
     {
+        // 今回は特に処理なし（将来拡張用）
     }
 
     void Spawn()
     {
-        float spawnY = lever.isUp ? spawnY_Up : spawnY_Down;
-        float destroyY = lever.isUp ? destroyY_Up : destroyY_Down;
+        // ★ 向き判定を一本化
+        bool isUp =
+            useLever && lever != null
+            ? lever.isUp
+            : fixedUp;
+
+        float spawnY = isUp ? spawnY_Up : spawnY_Down;
+        float destroyUpper = isUp ? destroyY_Up : destroyY_Down;
+        float destroyLower = isUp ? destroyY_Down : destroyY_Up;
 
         Vector3 spawnPos = transform.position;
         spawnPos.y = spawnY;
@@ -63,9 +79,9 @@ public class lift_spawner : MonoBehaviour
             Instantiate(liftPrefab, spawnPos, Quaternion.identity);
 
         // 注入
-        lift.lever = lever;
+        lift.lever = useLever ? lever : null;
         lift.speed = speed;
-        lift.destroyUpperY = destroyY_Up;
-        lift.destroyLowerY = destroyY_Down;
+        lift.destroyUpperY = destroyUpper;
+        lift.destroyLowerY = destroyLower;
     }
 }
